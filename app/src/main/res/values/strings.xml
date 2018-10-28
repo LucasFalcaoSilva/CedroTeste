@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cedro Teste</string>
+    <string name="nome">Nome</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="senha">Senha</string>
+    <string name="usuario">Usuario</string>
+    <string name="acessar">Acessar</string>
+</resources>
