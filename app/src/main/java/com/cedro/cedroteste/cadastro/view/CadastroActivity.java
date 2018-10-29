@@ -1,6 +1,5 @@
 package com.cedro.cedroteste.cadastro.view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 
 import com.cedro.cedroteste.R;

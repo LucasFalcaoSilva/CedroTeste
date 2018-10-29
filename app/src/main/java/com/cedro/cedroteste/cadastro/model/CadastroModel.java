@@ -28,13 +28,14 @@ public class CadastroModel implements CadastroMVP.CadastroModel {
     }
 
     @Override
-    public void realizarCadastro(String usuario, String senha, String nome) {
+    public void realizarCadastro(final String usuario, String senha, String nome) {
         CadastroSO cadastroSO = CadastroSO.createCadastroSO(usuario, senha,nome);
 
         cedroService.realizarCadastro(cadastroSO, new CallBackService<RetornoSO>() {
             @Override
             public void sucesso(RetornoSO retornoSO) {
                 mSession.setToken(retornoSO.getToken());
+                mSession.setEmail(usuario);
                 cadastroPresenter.openLista();
             }
 

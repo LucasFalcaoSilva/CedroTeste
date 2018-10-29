@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.widget.EditText;
 
 import com.cedro.cedroteste.cadastro.view.CadastroActivity_;
+import com.cedro.cedroteste.lista.view.ListaActivity_;
 import com.cedro.cedroteste.login.LoginMVP;
 import com.cedro.cedroteste.login.model.LoginModel;
 
@@ -65,7 +66,7 @@ public class LoginPresenter implements LoginMVP.LoginPresenter {
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                        ListaActivity_.intent(mContext).start();
                     }
                 })
                 .show();

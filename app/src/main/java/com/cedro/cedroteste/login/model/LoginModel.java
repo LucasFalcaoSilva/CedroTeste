@@ -29,13 +29,14 @@ public class LoginModel implements LoginMVP.LoginModel {
 
     @Override
     @Background
-    public void validarLogin(String usuario, String senha) {
+    public void validarLogin(final String usuario, String senha) {
         LoginSO loginSO = LoginSO.createLoginSO(usuario, senha);
 
         cedroService.validarLogin(loginSO, new CallBackService<RetornoSO>() {
             @Override
             public void sucesso(RetornoSO retornoSO) {
                 mSession.setToken(retornoSO.getToken());
+                mSession.setEmail(usuario);
                 loginPresenter.openLista();
             }
 
